@@ -1,0 +1,15 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+{{- $pages := .RegularPages.ByWeight }}
+{{- $personal := where $pages "Params.group" "!=" "school" }}
+{{- $school := where $pages "Params.group" "school" }}
+{{ with $personal }}
+<h2>Personal and work</h2>
+<ul class="cards">{{ range . }}{{ partial "card.html" . }}{{ end }}</ul>
+{{ end }}
+{{ with $school }}
+<h2>School</h2>
+<ul class="cards">{{ range . }}{{ partial "card.html" . }}{{ end }}</ul>
+{{ end }}
+{{ end }}

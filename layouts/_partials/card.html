@@ -1,0 +1,5 @@
+<li class="card">
+  <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+  {{ with .Params.context }}<p class="meta">{{ . }}</p>{{ end }}
+  <p>{{ .Summary | plainify }}</p>
+</li>

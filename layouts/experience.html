@@ -1,0 +1,44 @@
+{{ define "main" }}
+{{- $d := hugo.Data.experience }}
+<h1>{{ .Title }}</h1>
+{{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+
+{{ range $d.jobs }}
+<section class="job">
+  <header>
+    <h2>{{ .title }}</h2>
+    <p class="org">{{ .company }}</p>
+    <p class="meta">{{ .start }} – {{ .end }}{{ with .note }} ({{ . }}){{ end }}{{ with .location }} · {{ . }}{{ end }}</p>
+  </header>
+  {{ with .ladder }}
+  <h3 class="label">Title progression</h3>
+  <ol class="ladder">
+    {{- range . }}
+    <li><time datetime="{{ .date }}">{{ time.Format "Jan 2006" .date }}</time> <span>{{ .title }}</span></li>
+    {{- end }}
+  </ol>
+  {{ end }}
+  <ul>
+    {{- range .bullets }}
+    <li>{{ . | markdownify }}</li>
+    {{- end }}
+  </ul>
+</section>
+{{ end }}
+
+<section aria-labelledby="edu-h">
+  <h2 id="edu-h">Education</h2>
+  {{ range $d.education }}
+  <p><strong>{{ .school }}</strong><br>{{ .degree }}<br><span class="meta">{{ .start }} – {{ .end }}{{ with .note }} · {{ . }}{{ end }}</span></p>
+  {{ end }}
+</section>
+
+<section class="other" aria-labelledby="other-h">
+  <h2 id="other-h">Other experience</h2>
+  <ul>
+    {{- range $d.other }}
+    <li>{{ .title }}, {{ .company }} <span class="meta">· {{ .start }} – {{ .end }}</span></li>
+    {{- end }}
+  </ul>
+</section>
+{{ end }}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="{{ site.Language.Locale }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{- $title := cond .IsHome (printf "%s · %s" site.Title site.Params.headline) (printf "%s · %s" .Title site.Title) }}
+  {{- $desc := or .Description .Summary site.Params.description | plainify | strings.TrimSpace | truncate 180 }}
+  <title>{{ $title }}</title>
+  <meta name="description" content="{{ $desc }}">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <meta property="og:type" content="{{ cond .IsHome "website" "article" }}">
+  <meta property="og:site_name" content="{{ site.Title }}">
+  <meta property="og:title" content="{{ $title }}">
+  <meta property="og:description" content="{{ $desc }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:image" content="{{ site.Params.ogImage | absURL }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Gus Fowler, network engineer">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+  {{- $css := resources.Get "site.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="{{ "/" | relURL }}">{{ site.Title }}</a>
+      <nav aria-label="Main">
+        <ul>
+          {{- range site.Menus.main }}
+          {{- $active := or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}
+          <li><a href="{{ .URL }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+          {{- end }}
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="wrap">
+    {{ block "main" . }}{{ end }}
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>{{ partial "links.html" . }}</p>
+      <p class="muted">© {{ now.Year }} Gus Fowler</p>
+    </div>
+  </footer>
+</body>
+</html>

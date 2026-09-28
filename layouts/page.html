@@ -1,0 +1,8 @@
+{{ define "main" }}
+<article class="prose">
+  {{ if eq .Section "projects" }}<p class="crumb"><a href="{{ "projects/" | relURL }}">← Projects</a></p>{{ end }}
+  <h1>{{ .Title }}</h1>
+  {{ with .Params.context }}<p class="meta">{{ . }}</p>{{ end }}
+  {{ .Content }}
+</article>
+{{ end }}

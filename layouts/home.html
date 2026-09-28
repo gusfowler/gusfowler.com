@@ -1,0 +1,33 @@
+{{ define "main" }}
+<section class="hero">
+  <img class="portrait" src="{{ "img/gus.jpg" | relURL }}" width="427" height="640" alt="Portrait of Gus Fowler">
+  <div>
+    <h1>Gus Fowler</h1>
+    <p class="headline">{{ site.Params.headline }}</p>
+    {{ with .Params.intro }}<p class="lede">{{ . }}</p>{{ end }}
+    <p class="links">{{ partial "links.html" . }}</p>
+  </div>
+</section>
+
+{{ with .Params.now }}
+<section class="now" aria-labelledby="now-h">
+  <h2 id="now-h">Now</h2>
+  <p>{{ . | markdownify }}</p>
+</section>
+{{ end }}
+
+<section class="prose" aria-labelledby="about-h">
+  <h2 id="about-h">About</h2>
+  {{ .Content }}
+</section>
+
+<section aria-labelledby="featured-h">
+  <h2 id="featured-h">Selected projects</h2>
+  <ul class="cards">
+    {{- range where (where site.RegularPages "Section" "projects") "Params.featured" true }}
+    {{ partial "card.html" . }}
+    {{- end }}
+  </ul>
+  <p><a href="{{ "projects/" | relURL }}">All projects →</a></p>
+</section>
+{{ end }}

@@ -1,0 +1,73 @@
+# Rendered by layouts/experience.html. Newest first.
+# `ladder` is an optional title progression within one employer (oldest first).
+
+jobs:
+  - company: Iridium Satellite
+    title: Network Engineer 3 – Legacy Services Lead
+    start: "May 2023"
+    end: Present
+    ladder:
+      - { title: Network Control Specialist 1, date: "2023-05-11" }
+      - { title: Network Engineer 1, date: "2024-02-28" }
+      - { title: Network Engineer 2, date: "2024-10-06" }
+      - { title: Network Engineer 3, date: "2026-02-25" }
+      - { title: Network Engineer 3 – Legacy Services Lead, date: "2026-07-07" }
+    bullets:
+      - Started at the first tier of the on-call escalation chain for Iridium's prepaid and safety services, learning both under a mentor.
+      - Moved from running procedures to writing them. I plan, write, and execute my own updates and infrastructure changes.
+      - Lead the legacy services side of my team, providing technical direction across Iridium's legacy circuit-switched voice and data services.
+      - Drive the migration of those services to SIP while maintaining interoperability with 2G technology. Two services migrated to date, with several more planned.
+      - Own the legacy voice switch and mentor a junior engineer on the team.
+      - Simplified voice call routing, which improved call quality and made faults easier to diagnose.
+      - "Retired a costly legacy circuit-switched trunk by bringing traffic in over SIP through a SIP-to-SS7 protocol converter into the legacy voice switch. Cut the monthly recurring cost from roughly $100k to $8k."
+      - Migrated roughly 8,000 DIDs (direct inward dial numbers) with no customer impact, including two safety-of-life services (ATS and GMDSS).
+      - While on the NOC floor as a Network Control Specialist 1, built a Telegraf, Prometheus, and Grafana pipeline that collects about 40 metrics per second from the MPLS network, and wrote Python tooling for verification and maintenance procedures.
+
+  - company: Mashgin
+    title: Deployment Engineer
+    start: "May 2021"
+    end: "Jul 2021"
+    location: Phoenix, AZ
+    bullets:
+      - Deployed more than 60 computer-vision point-of-sale kiosks across Arizona Circle K stores.
+      - Trained staff at more than 20 locations on operation, basic troubleshooting, and escalation.
+      - Diagnosed and repaired more than 50 hardware and software faults in the field.
+
+  - company: Mashgin
+    title: Deployment Engineering Intern
+    start: "Oct 2020"
+    end: "May 2021"
+    location: Phoenix, AZ
+    bullets:
+      - Onboarded more than 250 customers onto a self-checkout system.
+      - Reported field issues back to the deployment team so they could be fixed quickly.
+
+  - company: Cromwell Architects and Engineers
+    title: IT Intern
+    start: "May 2018"
+    end: "Aug 2019"
+    note: Summers
+    location: Little Rock, AR
+    bullets:
+      - Provided first-line hardware and software support and kept workstations patched and provisioned.
+      - Built a synchronized digital-signage system for idle displays and designed a mount to extend Wi-Fi coverage into a large conference room.
+
+  - company: Hocott's Garden Center
+    title: Sales and IT Specialist
+    start: "Aug 2014"
+    end: "May 2018"
+    location: Little Rock, AR
+    bullets:
+      - Replaced the business phone service with a self-hosted SIP/VoIP system, including a mobile extension.
+      - Rebuilt the network to support on-site hosting, public Wi-Fi, and a CCTV system.
+
+other:
+  - { company: AMC Theatres, title: Crew Member, start: "Jul 2022", end: "Nov 2022", location: "Phoenix, AZ" }
+  - { company: The Tennis Shoppe, title: Sales, start: "Aug 2021", end: "Dec 2021" }
+
+education:
+  - school: Arizona State University
+    degree: B.S. Computer Science, Ira A. Fulton Schools of Engineering
+    start: "Aug 2018"
+    end: "Dec 2022"
+    note: Dean's List, Fall 2018

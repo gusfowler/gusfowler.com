@@ -1,0 +1,37 @@
+baseURL = "https://gusfowler.com/"
+locale = "en-US"
+title = "Gus Fowler"
+disableKinds = ["taxonomy", "term", "rss"]
+enableRobotsTXT = true
+
+[params]
+  description = "Gus Fowler, network engineer. Voice and data networks, migrations, monitoring, and a homelab run like production."
+  headline = "Network engineer"
+  email = "gus.fowler12@gmail.com"
+  linkedin = "https://www.linkedin.com/in/august-fowler"
+  github = "https://github.com/gusfowler"
+  ogImage = "img/og.jpg"
+
+[menus]
+  [[menus.main]]
+    name = "About"
+    pageRef = "/"
+    weight = 10
+  [[menus.main]]
+    name = "Experience"
+    pageRef = "/experience"
+    weight = 20
+  [[menus.main]]
+    name = "Projects"
+    pageRef = "/projects"
+    weight = 30
+  [[menus.main]]
+    name = "Contact"
+    pageRef = "/contact"
+    weight = 40
+
+[markup.goldmark.renderer]
+  unsafe = false
+
+[minify.tdewolff.html]
+  keepQuotes = true
