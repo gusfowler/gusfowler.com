@@ -3,15 +3,15 @@
 
 jobs:
   - company: Iridium Satellite
-    title: Network Engineer 3 – Legacy Services Lead
+    title: Network Engineer III – Legacy Services Lead
     start: "May 2023"
     end: Present
     ladder:
-      - { title: Network Control Specialist 1, date: "2023-05-11" }
-      - { title: Network Engineer 1, date: "2024-02-28" }
-      - { title: Network Engineer 2, date: "2024-10-06" }
-      - { title: Network Engineer 3, date: "2026-02-25" }
-      - { title: Network Engineer 3 – Legacy Services Lead, date: "2026-07-07" }
+      - { title: Network Control Specialist I, date: "2023-05-11" }
+      - { title: Network Engineer I, date: "2024-02-28" }
+      - { title: Network Engineer II, date: "2024-10-06" }
+      - { title: Network Engineer III, date: "2026-02-25" }
+      - { title: Network Engineer III – Legacy Services Lead, date: "2026-07-07" }
     bullets:
       - Started at the first tier of the on-call escalation chain for Iridium's prepaid and safety services, learning both under a mentor.
       - Moved from running procedures to writing them. I plan, write, and execute my own updates and infrastructure changes.
@@ -21,7 +21,7 @@ jobs:
       - Simplified voice call routing, which improved call quality and made faults easier to diagnose.
       - "Retired a costly legacy circuit-switched trunk by bringing traffic in over SIP through a SIP-to-SS7 protocol converter into the legacy voice switch. Cut the monthly recurring cost from roughly $100k to $8k."
       - Migrated roughly 8,000 DIDs (direct inward dial numbers) with no customer impact, including two safety-of-life services (ATS and GMDSS).
-      - While on the NOC floor as a Network Control Specialist 1, built a Telegraf, Prometheus, and Grafana pipeline that collects about 40 metrics per second from the MPLS network, and wrote Python tooling for verification and maintenance procedures.
+      - While on the NOC floor as a Network Control Specialist I, built a Telegraf, Prometheus, and Grafana pipeline that collects about 40 metrics per second from the MPLS network, and wrote Python tooling for verification and maintenance procedures.
 
   - company: Mashgin
     title: Deployment Engineer
