@@ -8,3 +8,4 @@ Email is the best way to reach me. I read everything and reply to anything that 
 - **Email:** [gus.fowler12@gmail.com](mailto:gus.fowler12@gmail.com)
 - **LinkedIn:** [linkedin.com/in/august-fowler](https://www.linkedin.com/in/august-fowler)
 - **GitHub:** [github.com/gusfowler](https://github.com/gusfowler)
+- **Résumé:** [PDF, one page](/gus-fowler-resume.pdf)
